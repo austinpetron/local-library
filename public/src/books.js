@@ -1,3 +1,8 @@
+//helper function
+function findId (array, id){
+  return array.find((item) => item.id === id);
+}
+
 function findAuthorById(authors, id) {
   let author = {};
   for (let i = 0; i < authors.length; i++){
@@ -9,8 +14,7 @@ function findAuthorById(authors, id) {
 }
 
 function findBookById(books, id) {
-  const bookId = books.find(book => book.id === id);
-  return bookId;
+  return findId (books,id)
 } 
 
 function partitionBooksByBorrowedStatus(books) {
